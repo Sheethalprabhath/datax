@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --identity-colorscheme-color-primary-action: #236580;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased;
+  }
+}
+
+@layer components {
+  .section-card {
+    @apply rounded-xl border border-slate-200 bg-white p-5 shadow-sm;
+  }
+
+  .section-title {
+    @apply text-sm font-semibold uppercase tracking-wide text-slate-500;
+  }
+
+  .badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium;
+  }
+
+  .badge-active {
+    @apply badge bg-clinical-100 text-clinical-800;
+  }
+
+  .badge-warning {
+    @apply badge bg-amber-100 text-amber-800;
+  }
+
+  .badge-danger {
+    @apply badge bg-red-100 text-red-800;
+  }
+
+  .badge-info {
+    @apply badge bg-blue-100 text-blue-800;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg bg-clinical-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-clinical-700 disabled:opacity-50;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-50 disabled:opacity-50;
+  }
+
+  .input-field {
+    @apply w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:border-clinical-500 focus:outline-none focus:ring-2 focus:ring-clinical-200;
+  }
+
+  .label-text {
+    @apply mb-1 block text-sm font-medium text-slate-700;
+  }
+
+  .nav-btn-active {
+    color: var(--identity-colorscheme-color-primary-action);
+    border-color: var(--identity-colorscheme-color-primary-action);
+    background-color: color-mix(in srgb, var(--identity-colorscheme-color-primary-action) 10%, white);
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
